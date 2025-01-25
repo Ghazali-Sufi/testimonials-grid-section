@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Poppins:wght@500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", serif;
+  background-color: hsl(210, 46%, 95%);
+  font-size: 13px;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+
+.container {
+  display: grid;
+  gap: 2rem;
+  grid-template-areas: "one" "two" "three" "four" "five";
+  padding-block: 8rem;
+  width: min(95%, 80rem);
+  margin-inline: auto; /* Centers the box horizontally in its container */
+  grid-auto-columns: 1fr;
+}
+.container .quote {
+  background-image: url("../../images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+  color: white;
+}
+@media (min-width: 30em) {
+  .container {
+    grid-template-areas: "one one" "two five" "three five" "four four";
+  }
+}
+@media (min-width: 50em) {
+  .container {
+    grid-template-areas: "one one two five" "three four four five";
+  }
+}
+.container .testimonial:nth-child(1) {
+  grid-area: one;
+}
+.container .testimonial:nth-child(2) {
+  grid-area: two;
+}
+.container .testimonial:nth-child(3) {
+  grid-area: three;
+}
+.container .testimonial:nth-child(4) {
+  grid-area: four;
+}
+.container .testimonial:nth-child(5) {
+  grid-area: five;
+}
+.container .testimonial {
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+.container .testimonial .flex {
+  display: flex;
+  margin-bottom: 10px;
+  gap: 15px;
+}
+.container .testimonial .flex .name-position {
+  margin-top: 5px;
+}
+.container .testimonial .flex .person_image {
+  border: 1px solid gray;
+  width: 2.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+.container .testimonial .flex .name {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1;
+}
+.container .testimonial .flex .position {
+  font-size: 0.6875rem;
+  opacity: 0.5;
+  color: hsl(0, 0%, 81%);
+}
+.container .testimonial .flex .position-3,
+.container .testimonial .flex .position-5 {
+  color: gray;
+}
+.container .testimonial .flex .name-1,
+.container .testimonial .flex .name-2,
+.container .testimonial .flex .name-4 {
+  color: hsl(0, 0%, 100%);
+}
+.container .testimonial .title-1,
+.container .testimonial .title-2,
+.container .testimonial .title-3,
+.container .testimonial .title-4,
+.container .testimonial .title-5 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+.container .testimonial .title-1,
+.container .testimonial .title-2,
+.container .testimonial .title-4 {
+  color: white;
+}
+.container .testimonial .subtitle {
+  color: hsl(0, 0%, 81%);
+}
+.container .testimonial .subtitle-3,
+.container .testimonial .subtitle-5 {
+  color: gray;
+}
+.container .test-1 {
+  background-color: hsl(263, 55%, 52%);
+}
+.container .test-2 {
+  background-color: hsl(217, 19%, 35%);
+}
+.container .test-3 {
+  background-color: hsl(0, 0%, 100%);
+}
+.container .test-4 {
+  background-color: hsl(219, 29%, 14%);
+}
+.container .test-5 {
+  background-color: hsl(0, 0%, 100%);
+}
